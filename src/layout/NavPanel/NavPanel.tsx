@@ -64,6 +64,7 @@ const NavPanel = () => {
   }, [location]);
 
   return (
+   <>
     <div className={style["navigation"]}>
       <div
         className={classNames(
@@ -130,6 +131,8 @@ const NavPanel = () => {
         })}
       </div>
     </div>
+    <div className={style['black-bg']}></div>
+   </>
   );
 };
 export default NavPanel;

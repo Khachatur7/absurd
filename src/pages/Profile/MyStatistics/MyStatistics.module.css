@@ -1,6 +1,15 @@
+.my-statistics{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: var(--def-padding);
+}
+
 .datas {
     width: 100%;
-    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -10,7 +19,6 @@
   
   .buttons {
     width: 100%;
-    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -21,7 +29,7 @@
   .def-buttons{
       width: 100%;
       display: flex;
-      justify-content: start;
+      justify-content: center;
       align-items: center;
       gap: 13px;
   }

@@ -16,7 +16,7 @@
   --def-color: #fff;
   --light-blue: #33d2ff;
   --blue: #007aff;
-  --dark-blue:#107080;
+  --dark-blue: #107080;
   --first-family: "Inter";
   --second-family: "Unispace";
   --df-line-grad: linear-gradient(122.82deg, #f72585 -1.21%, #4cc9f0 70.09%);
@@ -29,6 +29,7 @@
 html,
 body {
   box-sizing: border-box;
+  overflow: auto;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: var(--def-color);
+  overflow: auto;
 }
 
 *,

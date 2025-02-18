@@ -67,7 +67,7 @@ const MyStatistics = () => {
     },
   ];
   return (
-    <div className="my-statistics">
+    <div className={style['my-statistics']}>
       <div className={style["datas"]}>
         <DataList datas={firstData} />
         <DataList datas={secondData} />

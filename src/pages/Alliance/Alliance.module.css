@@ -29,7 +29,7 @@
     padding:var(--def-padding);
     padding-top: 0;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 13px;
     margin-bottom: 7px;
