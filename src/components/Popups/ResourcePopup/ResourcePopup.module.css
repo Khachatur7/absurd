@@ -1,0 +1,52 @@
+.modale {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: var(--def-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    z-index: 11111;
+  }
+  
+  .popup {
+    position: relative;
+    width: 100%;
+    padding: 42px 10px 7px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--blue);
+    background: url(../../../assets/burin-it-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .popup::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(0, 0, 0, 0.6);
+    border-radius: inherit;
+  }
+  
+  .title {
+    font-family: var(--second-family);
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    position:relative;
+    z-index: 11;
+  }
+  
+  .done-bttn {
+    position:relative;
+    z-index: 11;
+  }
+  

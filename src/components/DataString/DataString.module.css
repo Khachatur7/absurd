@@ -1,0 +1,27 @@
+.data-string {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 5px;
+  z-index: 1;
+}
+
+.name,
+.data {
+  font-weight: 600;
+  line-height: 16.94px;
+}
+
+.dash-line {
+  flex: 1;
+  border-bottom: 1px dashed #fff;
+  margin-bottom: 3px;
+}
+
+.gradient-text {
+  background: var(--df-line-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,55 @@
+.datas {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .buttons {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .def-buttons{
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 13px;
+  }
+  
+  .children {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 9px 0px;
+  }
+  
+  .children span {
+    white-space: nowrap;
+  }
+  
+  .def-children{
+      width:70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin: 5px 0px;
+  }
+  
+  .def-children img{
+      position: static;
+      max-width: 25px;
+      z-index: 11;
+  }

@@ -1,0 +1,44 @@
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+  padding: 2px 9px;
+  position: relative;
+  z-index: 11;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: url(../../assets/avatar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.user:hover{
+  background: rgba(51, 210, 255, 0.2);
+}
+
+.nickname {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: 600;
+  line-height: 16.94px;
+}
+
+.grade {
+  line-height: 16.94px;
+}
+
+.gradient-text{
+    background: var(--df-line-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

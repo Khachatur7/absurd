@@ -1,0 +1,129 @@
+.prequel-page {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  padding-bottom: 150px;
+}
+
+.prequel-page::-webkit-scrollbar {
+  width: 0;
+}
+
+.prequel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+  padding: 30px 15px 50px 15px;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.prequel-component {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--light-blue);
+}
+
+.description {
+  line-height: 17px;
+  font-size: 14.2px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.top-shadow {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+  position: fixed;
+  top: 0;
+  z-index: 1111;
+}
+
+.bottom-shadow {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+  transform: rotateZ(180deg);
+  position: fixed;
+  bottom: 0;
+  z-index: 1111;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.prequel-page {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  perspective: 700px;
+  text-align: justify;
+}
+
+.prequel {
+  position: relative;
+  padding-top: 630px;
+  animation: prequel 260s linear;
+}
+
+@keyframes prequel {
+  0% {
+    top: 100px;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-1000px);
+  }
+}
+
+.prequel-start {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -11;
+  top: 0;
+  left: 0;
+  background: #00000000;
+}
+
+.prequel-end {
+  z-index: 111111;
+  animation: end ease 2s forwards;
+}
+
+@keyframes end {
+  0% {
+    background: #00000000;
+  }
+  100% {
+    background-color: #fff;
+  }
+}

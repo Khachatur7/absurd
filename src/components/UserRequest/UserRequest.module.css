@@ -1,0 +1,58 @@
+.request {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+  padding: 2px 9px;
+  position: relative;
+  z-index: 11;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: url(../../assets/avatar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nickname {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: 600;
+  line-height: 16.94px;
+}
+.buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+.reject {
+  all: unset;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #ed172b 0%, #93121e 100%);
+}
+.accept {
+  all: unset;
+  padding: 4px 12px;
+  background: linear-gradient(180deg, #21cc51 0%, #166e55 100%);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1%;
+  border-radius: 6px;
+}
+
+.request-clicked{
+  display: none;
+}

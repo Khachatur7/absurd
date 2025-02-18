@@ -1,0 +1,76 @@
+.all-statistic {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: var(--def-padding);
+}
+
+.progress {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 5px 0px 10px 0px;
+}
+
+.progressbar {
+  width: 206px;
+  height: 31px;
+  background: #33d2ff33;
+  border-radius: 4px;
+  padding: 2px 2px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3px;
+}
+
+.progressbar-block {
+  width: 10%;
+  max-width: 15px;
+  height: 100%;
+  background: linear-gradient(122.82deg, #A3E81D -1.21%, #4CC9F0 70.09%);
+  border-radius: 3px;
+}
+
+.progress button {
+  width: 122px;
+  height: 30px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12.1px;
+  letter-spacing: 1.5%;
+  border-radius: 6px !important;
+}
+
+.progress button span {
+  margin-bottom: 3px;
+}
+
+.def-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.def-children {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.5%;
+  padding-left: 20px;
+}
+
+.def-children span {
+  width: 70px;
+}

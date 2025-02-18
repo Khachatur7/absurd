@@ -1,0 +1,24 @@
+.territories-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 150px;
+  transition: var(--transition);
+}
+
+.plus-bttn {
+  all: unset;
+  position: fixed;
+  right: 16px;
+  bottom: 110px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #33d2ff;
+  box-shadow: 0px 3px 30px 0px #00000014;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

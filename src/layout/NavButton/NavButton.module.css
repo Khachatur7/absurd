@@ -1,0 +1,26 @@
+.nav-bttn {
+  width: 55px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  color: #939393;
+  transition: 0.45s ease;
+}
+
+.nav-bttn path {
+  transition: 0.45s ease;
+}
+
+.nav-bttn-title {
+  font-size: 10px;
+  line-height: 12.1px;
+  letter-spacing: 1.5%;
+  text-align: center;
+}
+
+.active-nav-bttn {
+  color: var(--def-color);
+}

@@ -1,0 +1,85 @@
+.territory-component {
+  width: 165px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.territory-image {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.id {
+  width: 100%;
+  padding: 10px 10px 7px 10px;
+  border-bottom: 0.5px solid #444444;
+  font-weight: 600;
+  font-size: 12px;
+  background: #0f114b;
+}
+
+.territory-data {
+  width: 100%;
+  padding: 10px 10px 6px 10px;
+  background: #0f114b;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1%;
+  border-bottom: 0.5px solid #444444;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+}
+
+.data-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3px;
+}
+
+.data-item svg {
+  width: 14px;
+  height: 15px;
+}
+
+.progress {
+  width: 100%;
+  padding: 7px 10px;
+  background: #0f114b;
+}
+
+.progressbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background: rgba(51, 210, 255, 0.2);
+  border-radius: 3px;
+}
+
+.special-progressbar {
+  box-shadow: 0px 0px 20px 0px #eb308c80 inset;
+}
+
+
+.special-progressbar .progressbar-block {
+  background: linear-gradient(122.82deg, #f72585 -1.21%, #4cc9f0 70.09%);
+}
+
+.progressbar-block {
+  width: 10%;
+  max-width: 10px;
+  height: 16px;
+  background: rgba(51, 210, 255, 0.6);
+  border-radius: 3px;
+}
+.progressbar-full {
+  background: linear-gradient(122.82deg, #a3e81d -1.21%, #4cc9f0 70.09%);
+}

@@ -1,0 +1,39 @@
+.gradient-button {
+  all: unset;
+  position: relative;
+  padding: 8px 10px 9px 10px;
+  box-shadow: -1px 0 0 0px rgb(247, 37, 133, 0.75) ,
+    -1px -1px 0 0px rgba(247, 37, 133, 0.25),
+    -1px 1px 0 0px rgba(76, 201, 240, 0.25),
+    0 -1px 0 0px rgba(247, 37, 133, 0.5), 0 1px 0 0px rgba(76, 201, 240, 0.5),
+    1px -1px 0 0px rgba(76, 201, 240, 0.25),
+    1px 1px 0 0px rgba(76, 201, 240, 0.25), 1px 0 0 0px rgba(76, 201, 240, 0.75);
+  border-radius: 12px;
+  color: var(--def-color);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.active {
+  background: var(--df-line-grad);
+  font-weight: 700;
+box-shadow:  -1px 0 0 0px rgb(247, 37, 133, 0) ,
+-1px -1px 0 0px rgba(247, 37, 133, 0),
+-1px 1px 0 0px rgba(76, 201, 240, 0),
+0 -1px 0 0px rgba(247, 37, 133, 0), 0 1px 0 0px rgba(76, 201, 240, 0),
+1px -1px 0 0px rgba(76, 201, 240, 0),
+1px 1px 0 0px rgba(76, 201, 240, 0), 1px 0 0 0px rgba(76, 201, 240, 0);;
+}
+
+.blur-bg {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  border-radius: inherit;
+  backdrop-filter: blur(10px); 
+  background-color: rgb(0, 0, 0, 0.4);
+  z-index: -1;
+ 
+}

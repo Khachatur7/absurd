@@ -1,0 +1,83 @@
+.modale {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: var(--def-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(15px);
+  z-index: 11111;
+}
+
+.popup {
+  position: relative;
+  width: 100%;
+  padding: 42px 10px 7px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--blue);
+  background: url(../../../assets/burin-it-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.popup::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgb(0, 0, 0, 0.6);
+  border-radius: inherit;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-size: 25px;
+  line-height: 25px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 11;
+}
+
+.rank-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 11;
+}
+.symbol:nth-child(3) {
+  background: linear-gradient(180deg, #9146f8 0%, #b884ff 0.01%, #801cbd 100%);
+}
+
+.gradient-block {
+  width: 10px;
+  height: 15px;
+  margin: -1px 0px -1px 20px;
+}
+
+.gradient-block:nth-child(2) {
+  background: linear-gradient(180deg, #1987fd 0%, #b782fe 100%);
+}
+
+.gradient-block:nth-child(4) {
+  background: linear-gradient(180deg, #811ebe 0%, #fe868b 100%);
+}
+
+.gradient-block:nth-child(6) {
+  background: linear-gradient(180.1deg, #e43c40 0.09%, #ffd73d 99.92%);
+}
+
+.ok-bttn {
+  position: relative;
+  z-index: 11;
+}

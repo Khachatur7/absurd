@@ -1,0 +1,53 @@
+.message-component {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+}
+
+.avatar {
+  position: relative;
+  width: 34px;
+  height: 39px;
+  z-index: 11;
+}
+
+.avatar img {
+  width: 105%;
+  height: 95%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 72%, 50% 100%, 0% 72%);
+  margin-top: 6%;
+  margin-left: 7%;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 110%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+  background: var(--df-line-grad);
+  z-index: -1;
+}
+
+.message{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+}
+
+.messager-name {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.messager-text{
+    font-size: 9.5px;
+    line-height: 12.1px;
+opacity: .7;
+}

@@ -1,0 +1,81 @@
+.token-component {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.token-content{
+    width: 90%;
+    display: flex;
+  justify-content: start;
+  align-items: center; 
+  padding: 7px 0px;
+  border-bottom: var(--blue-border);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.token {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 3px;
+}
+
+.count {
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.token-name {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1%;
+  color: #21cb51;
+}
+
+.money-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 3px;
+}
+
+.balance {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.balance-in-ton,
+.balance-in-dollar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+}
+
+.bonus {
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #8f9098;
+}
+
+.bonus-gradient{
+    background: var(--df-line-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

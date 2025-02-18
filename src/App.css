@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Unispace";
+  src: url("./fonts/Unispace/unispacerusbydaymarius.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --def-color: #fff;
+  --light-blue: #33d2ff;
+  --blue: #007aff;
+  --dark-blue:#107080;
+  --first-family: "Inter";
+  --second-family: "Unispace";
+  --df-line-grad: linear-gradient(122.82deg, #f72585 -1.21%, #4cc9f0 70.09%);
+  --bottom-border: 0.5px solid #ffffff5e;
+  --blue-border: 0.5px solid var(--blue);
+  --transition: 0.45s ease;
+  --def-padding: 15px;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: var(--first-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--def-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

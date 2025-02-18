@@ -1,0 +1,56 @@
+.voucher {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid #007aff;
+  padding: 7px 0px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 4px;
+}
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+.type {
+  color: #878787;
+}
+
+.score-and-go-btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+
+.go-bttn {
+  all: unset;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0.5px solid #007aff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.go-bttn path {
+  transition: var(--transition);
+}
+
+.go-bttn:hover {
+  background-color: #007aff;
+}
+
+.go-bttn:hover:hover path {
+  fill: #fff;
+}
