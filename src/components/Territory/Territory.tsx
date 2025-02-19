@@ -6,34 +6,25 @@ import ArmSVG from "../SVG/ArmSVG/ArmSVG";
 import NFTSVG from "../SVG/NFTSVG/NFTSVG";
 import { FC } from "react";
 import { ITerritory } from "../../types/interfaces";
-import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../ProgressBar/ProgressBar";
 const Territory: FC<ITerritory> = ({
   people,
   progressbar,
-  specialProgressbar,
   name,
   nft,
   strength,
   upgrade,
 }) => {
-  const progressCount = Array.from({ length: progressbar }, (_, i) => i).slice(
-    0,
-    12
-  );
-
   const navigate = useNavigate();
   const GoToAllStaistics = () => {
-    localStorage.setItem("what-statistics",'general')
-    navigate("/absurd/profile")
-  }
+    localStorage.setItem("what-statistics", "general");
+    navigate("/absurd/profile");
+  };
 
   return (
     <div className={style["territory-component"]}>
-      <div
-        className={style["territory-image"]}
-        onClick={GoToAllStaistics}
-      >
+      <div className={style["territory-image"]} onClick={GoToAllStaistics}>
         <img src={territoryImage} alt="territory" />
       </div>
       <div className={style["id"]}>
@@ -58,38 +49,7 @@ const Territory: FC<ITerritory> = ({
         </div>
       </div>
       <div className={style["progress"]}>
-        {progressCount.length < 12 && (
-          <div
-            className={classNames(
-              style["progressbar"],
-              specialProgressbar ? style["special-progressbar"] : ""
-            )}
-          >
-            {progressCount.map((p) => {
-              return <div className={style["progressbar-block"]} key={p}></div>;
-            })}
-          </div>
-        )}
-        {progressCount.length >= 12 && (
-          <div
-            className={classNames(
-              style["progressbar"],
-              specialProgressbar ? style["special-progressbar"] : ""
-            )}
-          >
-            {progressCount.map((p) => {
-              return (
-                <div
-                  className={classNames(
-                    style["progressbar-block"],
-                    style["progressbar-full"]
-                  )}
-                  key={p}
-                ></div>
-              );
-            })}
-          </div>
-        )}
+        <ProgressBar progressbar={progressbar} />
       </div>
     </div>
   );

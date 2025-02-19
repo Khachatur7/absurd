@@ -7,7 +7,12 @@ import NFTSVG from "../../../components/SVG/NFTSVG/NFTSVG";
 import classNames from "classnames";
 
 const FilterSection = () => {
-  const options = ["Сортировать", "Сортировать"];
+  const options = [
+    "По уровню",
+    "По количеству друзей",
+    "По влиянию",
+    "По количеству NFT",
+  ];
   const [chooseOption, setChooseOption] = useState<boolean>(false);
   const [activeOption, setActiveOption] = useState<string>(options[0]);
 
@@ -113,16 +118,16 @@ const FilterSection = () => {
         )}
       </div>
       <div className={style["filter-by-parameter"]}>
-        <div className={style["icon"]}>
+        <div className={style["icon"]} onClick={()=>setActiveOption(options[0])}>
           <ArrowUpSVG gradient />
         </div>
-        <div className={style["icon"]}>
+        <div className={style["icon"]} onClick={()=>setActiveOption(options[1])}>
           <ManSVG />
         </div>
-        <div className={style["icon"]}>
+        <div className={style["icon"]} onClick={()=>setActiveOption(options[2])}>
           <ArmSVG />
         </div>
-        <div className={style["icon"]}>
+        <div className={style["icon"]} onClick={()=>setActiveOption(options[3])}>
           <NFTSVG />
         </div>
       </div>

@@ -13,7 +13,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 12,
-      specialProgressbar: false,
     },
     {
       name: "#32159",
@@ -22,7 +21,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 6,
-      specialProgressbar: true,
     },
     {
       name: "#32160",
@@ -31,7 +29,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 6,
-      specialProgressbar: false,
     },
     {
       name: "#32161",
@@ -40,7 +37,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 6,
-      specialProgressbar: false,
     },
     {
       name: "#32162",
@@ -49,7 +45,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 12,
-      specialProgressbar: false,
     },
     {
       name: "#32163",
@@ -58,7 +53,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 6,
-      specialProgressbar: true,
     },
     {
       name: "#32164",
@@ -67,7 +61,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 12,
-      specialProgressbar: false,
     },
     {
       name: "#32165",
@@ -76,7 +69,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 6,
-      specialProgressbar: true,
     },
     {
       name: "#32166",
@@ -85,7 +77,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 12,
-      specialProgressbar: false,
     },
     {
       name: "#32167",
@@ -94,7 +85,6 @@ const TerritoryList: FC<{
       strength: 62,
       nft: 0,
       progressbar: 7,
-      specialProgressbar: false,
     },
   ];
   return (
@@ -109,7 +99,6 @@ const TerritoryList: FC<{
             name={ter.name}
             nft={ter.nft}
             progressbar={ter.progressbar}
-            specialProgressbar={ter.specialProgressbar}
           />
         );
       })}

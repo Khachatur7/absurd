@@ -1,3 +1,7 @@
+html,body{
+  overflow: auto;
+}
+
 .warehouse-page {
   width: 100%;
   display: flex;

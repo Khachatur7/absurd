@@ -53,8 +53,8 @@
   position: absolute;
   top: 25px;
   right: 7px;
-  width: 70px;
-  height: 32px;
+  width: 70px !important;
+  height: 32px !important;
   border-radius: 6px;
   z-index: 11;
 }
@@ -87,4 +87,20 @@
 .cancel-bttn {
   position: relative;
   z-index: 11;
+}
+
+@media (max-width:768px) {
+  .alliance-bttn button {
+    width: 70px ;
+    height: 32px ;
+  }
+  
+}
+
+@media (max-width:450px) {
+  .alliance-bttn button {
+    width: 70px ;
+    height: 32px;
+  }
+  
 }

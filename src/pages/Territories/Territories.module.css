@@ -1,3 +1,7 @@
+html,body{
+  overflow: auto;
+}
+
 .territories-page {
   width: 100%;
   display: flex;

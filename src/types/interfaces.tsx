@@ -13,7 +13,6 @@ export interface ITerritory {
   strength: number;
   nft: number;
   progressbar: number;
-  specialProgressbar:boolean;
 }
 
 export interface IPage {

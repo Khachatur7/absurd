@@ -1,0 +1,35 @@
+  .progressbar {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+    background: rgba(51, 210, 255, 0.2);
+    border-radius: 3px;
+    transition: var(--transition);
+  }
+  
+  .violet-progressbar {
+    box-shadow: 0px 0px 20px 0px #eb308c80 inset;
+  }
+  
+  .violet-progressbar .progressbar-block {
+    background: linear-gradient(122.82deg, #f72585 -1.21%, #4cc9f0 70.09%);
+  }
+  
+  .progressbar-block {
+    width: 9.9px;
+    height: 16px;
+    background: rgba(51, 210, 255, 0.6);
+    border-radius: 3px;
+    transition: 0.2s ease-in;
+  }
+  .birch-progressbar .progressbar-block {
+    background: linear-gradient(122.82deg, #a3e81d -1.21%, #4cc9f0 70.09%);
+  }
+  
+  .progressbar-block:hover {
+    transform: scale(1.07);
+  }
+  

@@ -1,3 +1,7 @@
+html,body{
+  overflow: auto;
+}
+
 .statisics-page {
   width: 100%;
   display: flex;

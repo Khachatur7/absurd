@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import Button from "../../../components/Buttons/Button/Button";
 import LongButton from "../../../components/Buttons/LongButton/LongButton";
 import DataList from "../../../components/DataList/DataList";
 import ExtendableDataList from "../../../components/ExtendableDataList/ExtendableDataList";
 import { IDataString } from "../../../types/interfaces";
 import style from "./AllStatistics.module.css";
+import classNames from "classnames";
 
 const AllStatistics = () => {
   const firstData: IDataString[] = [
@@ -78,7 +80,15 @@ const AllStatistics = () => {
       dashLine: true,
     },
   ];
-  const progressCount = [0, 1, 2, 3];
+  const [progressbarCount, setProgressbarCount] = useState(5);
+  const [progressBlocks, setProgressBlocks] = useState(
+    Array.from({ length: progressbarCount }, (_, i) => i).slice(0, 12)
+  );
+  useEffect(() => {
+    setProgressBlocks(
+      Array.from({ length: progressbarCount }, (_, i) => i).slice(0, 12)
+    );
+  }, [progressbarCount]);
 
   return (
     <div className={style["all-statistic"]}>
@@ -87,12 +97,24 @@ const AllStatistics = () => {
       <ExtendableDataList title="nft" datas={extendableDataFirst} />
       <ExtendableDataList title="добывается" datas={extendableDataSecond} />
       <div className={style["progress"]}>
-        <div className={style["progressbar"]}>
-              {progressCount.map((p) => {
-                return (
-                  <div className={style["progressbar-block"]} key={p}></div>
-                );
-              })}
+        <div
+          className={classNames(
+            style["progressbar"],
+            progressBlocks.length > 9
+              ? style["birch-progressbar"]
+              : progressBlocks.length > 5
+              ? style["violet-progressbar"]
+              : ""
+          )}
+          onClick={() =>
+            progressbarCount < 12
+              ? setProgressbarCount(progressbarCount + 1)
+              : ""
+          }
+        >
+          {progressBlocks.map((p) => {
+            return <div className={style["progressbar-block"]} key={p}></div>;
+          })}
         </div>
         <LongButton onClick={() => {}} costumHeight>
           <span>Буст территории</span>

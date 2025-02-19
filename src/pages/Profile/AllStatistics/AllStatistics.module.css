@@ -27,14 +27,30 @@
   justify-content: start;
   align-items: center;
   gap: 3px;
+  transition: var(--transition);
+}
+
+.violet-progressbar {
+  box-shadow: 0px 0px 20px 0px #eb308c80 inset;
+}
+
+.violet-progressbar .progressbar-block {
+  background: linear-gradient(122.82deg, #f72585 -1.21%, #4cc9f0 70.09%);
 }
 
 .progressbar-block {
-  width: 10%;
-  max-width: 15px;
+  width: 14px;
   height: 100%;
-  background: linear-gradient(122.82deg, #A3E81D -1.21%, #4CC9F0 70.09%);
+  background: #4cc9f0;
   border-radius: 3px;
+}
+
+.birch-progressbar .progressbar-block {
+  background: linear-gradient(122.82deg, #a3e81d -1.21%, #4cc9f0 70.09%);
+}
+
+.progressbar-block:hover {
+  transform: scale(1.07);
 }
 
 .progress button {
@@ -73,4 +89,39 @@
 
 .def-children span {
   width: 70px;
+}
+
+
+@media (min-width:768px) {
+  .progressbar {
+    width: 260px;
+    height: 37px;
+    border-radius: 5px;
+}
+.progressbar-block{
+  width: 18.5px;
+  border-radius: 4px;
+}
+
+.progress button {
+  width: 185px;
+  height: 35px;
+}
+}
+
+@media (min-width:400px) {
+  .progressbar {
+    width: 260px;
+    height: 37px;
+    border-radius: 5px;
+}
+.progressbar-block{
+  width: 18.5px;
+  border-radius: 4px;
+}
+
+.progress button {
+  width: 185px;
+  height: 35px;
+}
 }

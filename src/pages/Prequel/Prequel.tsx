@@ -35,13 +35,13 @@ const Prequel = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setPrequelEnd(true);
+      setTimeout(() => {
+        navigate("/absurd");
+      }, 2000);
     }, 70000);
-    const navigateTimer = setTimeout(() => {
-      navigate("/absurd");
-    }, 72000);
+
     return () => {
       clearTimeout(timer);
-      clearTimeout(navigateTimer);
     };
   }, [prequelEnd]);
 
@@ -60,11 +60,11 @@ const Prequel = () => {
       <div className={style["prequel"]}>
         {headlines.map((text, ind) => {
           return (
-            <div className={style["prequel-component"]}>
+            <div className={style["prequel-component"]} key={text}>
               <span className={style["title"]}>{text}</span>
               <div className={style["description"]}>
                 {texts[ind].map((desc) => {
-                  return <span className={style["paragraph"]}>{desc}</span>;
+                  return <span key={desc} className={style["paragraph"]}>{desc}</span>;
                 })}
               </div>
             </div>

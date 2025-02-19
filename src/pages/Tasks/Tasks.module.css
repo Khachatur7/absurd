@@ -1,3 +1,7 @@
+html,body{
+    overflow: auto;
+  }
+
 .tasks-page{
     width: 100%;
     display: flex;
