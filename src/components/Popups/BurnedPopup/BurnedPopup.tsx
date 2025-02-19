@@ -14,7 +14,9 @@ const BurnedPopup: FC<{
         </video>
       </div>
       <div className={style["popup"]}>
-        <div className={style["title"]}>Сожжено ресурсов: {"count"}</div>
+        <div className={style["title"]}> <span>Сожжено ресурсов:</span>
+          <span> 10</span>
+        </div>
         <div className={style["cancel-bttn"]}>
           <LongButton onClick={() => closePopup(false)}>OK</LongButton>
         </div>

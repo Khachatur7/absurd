@@ -8,19 +8,25 @@ const BurnPopup: FC<{
   setBurned: (value: React.SetStateAction<boolean>) => void;
   closePopup: (value: React.SetStateAction<boolean>) => void;
 }> = ({ closePopup, setBurned }) => {
+
+  const WasBurned = () => {
+    setBurned(true)
+    closePopup(false)
+  }
+
   return (
     <div className={style["modale"]}>
       <div className={style["popup"]}>
         <div className={style["title"]}>сжигание ресурсов</div>
         <div className={style["burn-buttons"]}>
-          <Button onClick={() => setBurned(true)}>
+          <Button onClick={WasBurned}>
             {" "}
             <div className={style["children"]}>
               <FireSVG width="25px" active />
               <div>Сжечь всё</div>
             </div>
           </Button>{" "}
-          <Button onClick={() => setBurned(true)}>
+          <Button onClick={WasBurned}>
             {" "}
             <div className={style["children"]}>
               <FireSVG width="25px" active />
