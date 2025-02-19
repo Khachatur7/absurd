@@ -10,6 +10,7 @@ import style from "./Warehouse.module.css";
 import BurnPopup from "../../components/Popups/BurnPopup/BurnPopup";
 import SendPopup from "../../components/Popups/SendPopup/SendPopup";
 import ChooseUserPopup from "../../components/Popups/ChooseUserPopup/ChooseUserPopup";
+import BurnedPopup from "../../components/Popups/BurnedPopup/BurnedPopup";
 
 const Warehouse = () => {
   const resources: IResource[] = [
@@ -52,6 +53,7 @@ const Warehouse = () => {
   ];
   const [sendPopup, setSendPopup] = useState<boolean>(false);
   const [burnPopup, setBurnPopup] = useState<boolean>(false);
+  const [burnedPopup, setBurnedPopup] = useState<boolean>(false);
   const [usersPopup, setUsersPopup] = useState<boolean>(false);
   return (
     <div className={style["warehouse-page"]}>
@@ -85,8 +87,9 @@ const Warehouse = () => {
         </Button>
       </div>
       {sendPopup && <SendPopup closePopup={setSendPopup} setUsersPopup={setUsersPopup}/>}
-      {burnPopup && <BurnPopup closePopup={setBurnPopup} />}
+      {burnPopup && <BurnPopup closePopup={setBurnPopup} setBurned={setBurnedPopup}/>}
       {usersPopup && <ChooseUserPopup closePopup={setUsersPopup}/>}
+      {burnedPopup && <BurnedPopup closePopup={setBurnedPopup}/>}
     </div>
   );
 };

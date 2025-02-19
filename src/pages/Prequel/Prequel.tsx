@@ -25,6 +25,13 @@ const Prequel = () => {
     localStorage.setItem("first-time", JSON.stringify("not first time"));
   }
 
+  const SkipPrequel = () => {
+    setPrequelEnd(true);
+    setTimeout(() => {
+      navigate("/absurd");
+    }, 2000);
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setPrequelEnd(true);
@@ -36,7 +43,7 @@ const Prequel = () => {
       clearTimeout(timer);
       clearTimeout(navigateTimer);
     };
-  }, []);
+  }, [prequelEnd]);
 
   return (
     <div className={style["prequel-page"]}>
@@ -64,10 +71,10 @@ const Prequel = () => {
           );
         })}
       </div>
-      <div
-        className={style["bottom-shadow"]}
-        onClick={() => navigate("/absurd")}
-      ></div>
+
+      <div className={style["skip-button"]} onClick={SkipPrequel}>
+        Пропустить
+      </div>
     </div>
   );
 };

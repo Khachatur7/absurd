@@ -14,7 +14,6 @@ export interface ITerritory {
   nft: number;
   progressbar: number;
   specialProgressbar:boolean;
-  takeResource?: (value: React.SetStateAction<boolean>) => void
 }
 
 export interface IPage {

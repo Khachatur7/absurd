@@ -126,3 +126,32 @@ body {
     background-color: #fff;
   }
 }
+
+.skip-button {
+  position: fixed;
+  top: 93vh;
+  z-index: 11;
+  width: 165px;
+  height: 35px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 0.5px solid #c5c6cc;
+  border-radius: 5px;
+}
+
+.skip-button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}

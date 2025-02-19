@@ -13,6 +13,7 @@ const Header: FC<{
 
   const ClickOnAvatar = () => {
     if (!isOnProfile) {
+    localStorage.setItem("what-statistics",'my')
       return navigate("/absurd/profile");
     } else if (openRankPopup && isOnProfile) {
       return openRankPopup(true);

@@ -4,8 +4,7 @@ import Territory from "../Territory/Territory";
 import style from "./TerritoryList.module.css";
 
 const TerritoryList: FC<{
-  setTakeResource: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ setTakeResource }) => {
+}> = ({  }) => {
   const territories: ITerritory[] = [
     {
       name: "#32158",
@@ -111,7 +110,6 @@ const TerritoryList: FC<{
             nft={ter.nft}
             progressbar={ter.progressbar}
             specialProgressbar={ter.specialProgressbar}
-            takeResource={setTakeResource}
           />
         );
       })}

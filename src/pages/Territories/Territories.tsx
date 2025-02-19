@@ -5,11 +5,9 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import TerritoryList from "../../components/TerritoryList/TerritoryList";
 import FilterSection from "./FilterSection/FilterSection";
 import style from "./Territories.module.css";
-import ResourcePopup from "../../components/Popups/ResourcePopup/ResourcePopup";
 import CharacterPopup from "../../components/Popups/CharacterPopup/CharacterPopup";
 
 const Territories = () => {
-  const [takeResource, setTakeResource] = useState<boolean>(false);
   const [charactnerPopup, setCharactnerPopup] = useState(false);
   return (
     <div className={style["territories-page"]}>
@@ -21,7 +19,7 @@ const Territories = () => {
         setCharacterPopup={setCharactnerPopup}
       />
       <FilterSection />
-      <TerritoryList setTakeResource={setTakeResource} />
+      <TerritoryList />
       <Button onClick={() => {}}>Показать ещё</Button>
       <button className={style["plus-bttn"]}>
         <svg
@@ -37,7 +35,6 @@ const Territories = () => {
           />
         </svg>
       </button>
-      {takeResource && <ResourcePopup closePopup={setTakeResource} />}
       {charactnerPopup && <CharacterPopup closePopup={setCharactnerPopup}/>}
     </div>
   );

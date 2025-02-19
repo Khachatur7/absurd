@@ -5,21 +5,22 @@ import style from "./BurnPopup.module.css";
 import FireSVG from "../../SVG/FireSVG/FireSVG";
 
 const BurnPopup: FC<{
+  setBurned: (value: React.SetStateAction<boolean>) => void;
   closePopup: (value: React.SetStateAction<boolean>) => void;
-}> = ({ closePopup }) => {
+}> = ({ closePopup, setBurned }) => {
   return (
     <div className={style["modale"]}>
       <div className={style["popup"]}>
         <div className={style["title"]}>сжигание ресурсов</div>
-        <div className={style['burn-buttons']}>
-          <Button onClick={() => {}}>
+        <div className={style["burn-buttons"]}>
+          <Button onClick={() => setBurned(true)}>
             {" "}
             <div className={style["children"]}>
               <FireSVG width="25px" active />
               <div>Сжечь всё</div>
             </div>
           </Button>{" "}
-          <Button onClick={() => {}}>
+          <Button onClick={() => setBurned(true)}>
             {" "}
             <div className={style["children"]}>
               <FireSVG width="25px" active />
@@ -27,7 +28,7 @@ const BurnPopup: FC<{
             </div>
           </Button>
         </div>
-        <div className={style['cancel-bttn']}>
+        <div className={style["cancel-bttn"]}>
           <LongButton onClick={() => closePopup(false)}>Отмена</LongButton>
         </div>
       </div>
