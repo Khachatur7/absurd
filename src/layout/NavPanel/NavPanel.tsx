@@ -28,9 +28,9 @@ const NavPanel = () => {
     isOnProfile ? "" : pageNames[0]
   );
   const location = useLocation();
-  const [magicStick, setMagicStick] = useState(
-    activePage == "territories" && !isOnAlliance && !isOnManagment
-  );
+  const magicStick =
+    activePage == "territories" && !isOnAlliance && !isOnManagment;
+  const [resourceTaken, setResourceTaken] = useState(false);
 
   const pages: Page[] = [
     {
@@ -70,8 +70,7 @@ const NavPanel = () => {
 
   useEffect(() => {
     if (takeResource) {
-    setMagicStick(false);
-      
+      setResourceTaken(true);
     }
   }, [takeResource]);
 
@@ -80,7 +79,11 @@ const NavPanel = () => {
       <div className={style["navigation"]}>
         <div
           className={classNames(
-            magicStick ? style["magic-stick"] : style["circle"]
+            magicStick && !resourceTaken
+              ? style["active-magic-stick"]
+              : magicStick && resourceTaken
+              ? style["magic-stick"]
+              : style["circle"]
           )}
           onClick={() => (magicStick ? setTakeResource(true) : 0)}
         >

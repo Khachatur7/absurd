@@ -31,7 +31,7 @@ export interface IResource {
   title:string;
   count:string;
   special:boolean
-  canBurnIt:boolean
+  cantBurnIt:boolean
 }
 
 

@@ -58,7 +58,7 @@
   box-shadow: 0px 0px 20px 0px #eb308c80 inset, 2px 2px 15px 0px #6517a780;
 }
 
-.magic-stick {
+.active-magic-stick {
   position: absolute;
   top: 10px;
   z-index: 111;
@@ -67,6 +67,19 @@
   border-radius: 50%;
   background: linear-gradient(122.82deg, #a3e81d -1.21%, #4cc9f0 70.09%);
   box-shadow: 0px 3px 30px 0px #a3e81d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.magic-stick{
+  position: absolute;
+  top: 10px;
+  z-index: 111;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: linear-gradient(122.82deg, #a3e81d -1.21%, #4cc9f0 70.09%);
   display: flex;
   justify-content: center;
   align-items: center;

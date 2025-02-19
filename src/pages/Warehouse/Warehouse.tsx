@@ -18,37 +18,37 @@ const Warehouse = () => {
       title: "Алфавитный Порядок",
       special: false,
       count: "8 087.83",
-      canBurnIt: false,
+      cantBurnIt: false,
     },
     {
       title: "Арбузные Семечки",
       special: true,
       count: "7 601.28",
-      canBurnIt: true,
+      cantBurnIt: true,
     },
     {
       title: "Бамбуки Панды",
       special: false,
       count: "14 478.41",
-      canBurnIt: true,
+      cantBurnIt: true,
     },
     {
       title: "Батоны Хомяка",
       special: true,
       count: "6 652.73",
-      canBurnIt: false,
+      cantBurnIt: false,
     },
     {
       title: "Белоснежная Улыбка",
       special: false,
       count: "7 949.42",
-      canBurnIt: false,
+      cantBurnIt: false,
     },
     {
       title: "Бесхребетные Кубиты",
       special: false,
       count: "11 771.87",
-      canBurnIt: true,
+      cantBurnIt: true,
     },
   ];
   const [sendPopup, setSendPopup] = useState<boolean>(false);
