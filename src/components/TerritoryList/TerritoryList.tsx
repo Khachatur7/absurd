@@ -28,7 +28,7 @@ const TerritoryList: FC<{
       people: 2,
       strength: 62,
       nft: 0,
-      progressbar: 6,
+      progressbar: 5,
     },
     {
       name: "#32161",
@@ -52,7 +52,7 @@ const TerritoryList: FC<{
       people: 2,
       strength: 62,
       nft: 0,
-      progressbar: 6,
+      progressbar: 4,
     },
     {
       name: "#32164",
@@ -84,7 +84,7 @@ const TerritoryList: FC<{
       people: 2,
       strength: 62,
       nft: 0,
-      progressbar: 7,
+      progressbar: 4,
     },
   ];
   return (
