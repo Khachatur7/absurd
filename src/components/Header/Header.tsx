@@ -6,14 +6,15 @@ import classNames from "classnames";
 const Header: FC<{
   text: string;
   subtitle?: string;
+  subTitleIsRank?: boolean;
   openRankPopup?: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ text, subtitle, openRankPopup }) => {
+}> = ({ text, subtitle, openRankPopup, subTitleIsRank }) => {
   const navigate = useNavigate();
   const isOnProfile = useMatch("/absurd/profile");
 
   const ClickOnAvatar = () => {
     if (!isOnProfile) {
-    localStorage.setItem("what-statistics",'my')
+      localStorage.setItem("what-statistics", "my");
       return navigate("/absurd/profile");
     } else if (openRankPopup && isOnProfile) {
       return openRankPopup(true);
@@ -33,7 +34,12 @@ const Header: FC<{
         )}
         <div className={style["border"]}></div>
       </div>
-      <div className={style["text"]}>
+      <div
+        className={style["text"]}
+        onClick={() =>
+          subTitleIsRank ? openRankPopup && openRankPopup(true) : ""
+        }
+      >
         <span>{text}</span>
         {subtitle && <span className={style["subtitle"]}>{subtitle}</span>}
       </div>

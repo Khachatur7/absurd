@@ -72,3 +72,25 @@
   position: relative;
   z-index: 11;
 }
+
+.popup-info {
+  position: absolute;
+  width: 95%;
+  padding: 20px 10px 7px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--blue);
+  background: url(../../../assets/popup-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1111;
+}
+
+.rank-info{
+  font-family: var(--first-family);
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+padding: 0px 10px 20px 10px;
+}

@@ -22,8 +22,8 @@ const Prequel = () => {
   const storage = localStorage.getItem("first-time");
   const firstVisiting = storage ? JSON.parse(storage) : false;
   const [prequelEnd, setPrequelEnd] = useState(false);
-  if (firstVisiting) {
-    localStorage.removeItem("first-time");
+  if (!firstVisiting) {
+    localStorage.setItem("first-time", JSON.stringify("not first time"));
   }
 
   const SkipPrequel = () => {

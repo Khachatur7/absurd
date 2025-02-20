@@ -8,7 +8,8 @@ const Rank: FC<{
   number: string;
   text: string;
   activeRank?: boolean;
-}> = ({ number, text, activeRank, gradientClass }) => {
+  setShowInfo:(value: React.SetStateAction<boolean>) => void;
+}> = ({ number, text, activeRank, gradientClass,setShowInfo }) => {
   return (
     <div className={style["rank-component"]}>
       <div className={classNames(style["symbol"], style[gradientClass])}>
@@ -22,7 +23,7 @@ const Rank: FC<{
           <span className={style["your-rank"]}> Текущий ранг</span>
         )}
       </div>
-      <img src={iSVG} alt="" />
+      <img src={iSVG} alt="" onClick={()=>setShowInfo(true)}/>
     </div>
   );
 };

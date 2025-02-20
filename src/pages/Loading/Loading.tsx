@@ -7,9 +7,7 @@ const Loading = () => {
   const storage = localStorage.getItem("first-time");
   const firstVisiting = storage ? JSON.parse(storage) : false;
   const nextPage = firstVisiting ? "/absurd" : "/prequel";
-  if (firstVisiting) {
-    localStorage.removeItem("first-time");
-  }
+
   useEffect(() => {
     const navigateTimer = setTimeout(() => {
       navigate(nextPage);
@@ -24,8 +22,8 @@ const Loading = () => {
       <h1 onClick={() => navigate(nextPage)} className={style["title"]}>
         территория абсурда
       </h1>
-      {[...Array(12)].map((el) => {
-        return <div className={style["bg-pre-loading"]} key={el + 10}></div>;
+      {[...Array(12)].map((_) => {
+        return <div className={style["bg-pre-loading"]} key={Math.floor(Math.random() * 100)}></div>;
       })}
     </div>
   );
