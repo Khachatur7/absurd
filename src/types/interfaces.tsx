@@ -56,6 +56,15 @@ export interface IToken {
   balanceInCrypto:string
   balanceInDollar:string
   bonusPercent:string
+}
+
+export interface INFT {
+  avatar: string
+  tokenName:string
+  count:string
+  balanceInCrypto:string
+  balanceInDollar:string
+  bonusPercent:string
   
 }
 

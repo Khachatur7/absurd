@@ -3,14 +3,16 @@ import Header from "../../components/Header/Header";
 import style from "./Wallet.module.css";
 import GradientButton from "../../components/Buttons/GradientButton/GradientButton";
 import Button from "../../components/Buttons/Button/Button";
-import { IToken } from "../../types/interfaces";
+import { INFT, IToken } from "../../types/interfaces";
 import tokenAvatarOne from "../../assets/token-avatar-1.png";
 import tokenAvatarTwo from "../../assets/token-avatar-2.png";
 import tokenAvatarThree from "../../assets/token-avatar-3.png";
 import tokenAvatarFour from "../../assets/token-avatar-4.png";
 import Token from "../../components/Token/Token";
 import WithdrawPopup from "../../components/Popups/WithdrawPopup/WithdrawPopup";
-
+import nftAvatarOne from "../../assets/nft-one.jpg";
+import nftAvatarTwo from "../../assets/ngt-two.jpg";
+import nftAvatarThree from "../../assets/nft-three.jpg";
 const Wallet = () => {
   const buttons: string[] = ["Токены", "NFT"];
   const [activeBttn, setActiveBttn] = useState<string>(buttons[0]);
@@ -56,6 +58,32 @@ const Wallet = () => {
       bonusPercent: "0.62",
     },
   ];
+  const nft: INFT[] = [
+    {
+      avatar: nftAvatarOne,
+      tokenName: "NFT Taxi",
+      count: "0.00",
+      balanceInDollar: "0.00",
+      balanceInCrypto: "0.00",
+      bonusPercent: "0.00",
+    },
+    {
+      avatar: nftAvatarTwo,
+      tokenName: "NFT Aterra",
+      count: "0.00",
+      balanceInDollar: "0.00",
+      balanceInCrypto: "0.00",
+      bonusPercent: "0.00",
+    },
+    {
+      avatar: nftAvatarThree,
+      tokenName: "NFT BOLT",
+      count: "0.00",
+      balanceInDollar: "0.00",
+      balanceInCrypto: "0.00",
+      bonusPercent: "0.00",
+    },
+  ];
   const [withdrawPopup, setWithdrawPopup] = useState(false);
   return (
     <div className={style["wallet-page"]}>
@@ -73,11 +101,20 @@ const Wallet = () => {
           );
         })}
       </div>
-      <div className={style["tokens"]}>
-        {tokens.map((t) => {
-          return <Token token={t} key={t.tokenName} />;
-        })}
-      </div>
+      {activeBttn == "Токены" && (
+        <div className={style["tokens"]}>
+          {tokens.map((t) => {
+            return <Token token={t} key={t.tokenName} />;
+          })}
+        </div>
+      )}
+      {activeBttn == "NFT" && (
+        <div className={style["tokens"]}>
+          {nft.map((n) => {
+            return <Token token={n} key={n.tokenName} />;
+          })}
+        </div>
+      )}
       <div className={style["def-buttons"]}>
         <Button onClick={() => setWithdrawPopup(true)}>
           <div className={style["children"]}>

@@ -1,5 +1,4 @@
 import style from "./PageTitle.module.css";
-import titleBG from "../../assets/page-title.png";
 import specialImage from "../../assets/special-icon.png";
 import { FC } from "react";
 import BoxSVG from "../SVG/BoxSVG/BoxSVG";
@@ -14,7 +13,6 @@ const PageTitle: FC<{
   return (
     <div className={style["page-title-component"]}>
       <div className={style["content"]}>
-        <img src={titleBG} className={style["page-title-bg"]} alt="" />
         <div className={style["title"]}>
           {needIcon && <BoxSVG specialIcon={specialIcon} />}
           <span>{text}</span>

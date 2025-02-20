@@ -1,10 +1,23 @@
-.territory-list{
+.territory-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 13px;
+  padding: var(--def-padding);
+  padding-top: 0;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 371px) {
+  .territory-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: start;
-    gap: 13px;
-    padding: var(--def-padding);
+    gap: 7px;
+    padding: 10px;
     padding-top: 0;
     margin-bottom: 30px;
+  }
 }
