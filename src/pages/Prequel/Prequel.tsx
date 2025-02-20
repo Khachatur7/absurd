@@ -22,23 +22,37 @@ const Prequel = () => {
   const storage = localStorage.getItem("first-time");
   const firstVisiting = storage ? JSON.parse(storage) : false;
   const [prequelEnd, setPrequelEnd] = useState(false);
-  if (!firstVisiting) {
-    localStorage.setItem("first-time", JSON.stringify("not first time"));
+  if (firstVisiting) {
+    localStorage.removeItem("first-time");
   }
 
   const SkipPrequel = () => {
     setPrequelEnd(true);
     setTimeout(() => {
       navigate("/absurd");
-      document.documentElement.style.overflow = 'auto'; // Для <html>
-      document.body.style.overflow = 'auto'; // Для <body>
+      document.documentElement.style.overflow = "auto"; // Для <html>
+      document.body.style.overflow = "auto"; // Для <body>
     }, 2000);
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPrequelEnd(true);
+      setTimeout(() => {
+        navigate("/absurd");
+        document.documentElement.style.overflow = "auto"; // Для <html>
+        document.body.style.overflow = "auto"; // Для <body>
+      }, 2000);
+    }, 70000);
 
-useEffect(()=>{
-  document.documentElement.style.overflow = 'hidden'; // Для <html>
-    document.body.style.overflow = 'hidden'; // Для <body>
-},[])
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [prequelEnd]);
+
+  useEffect(() => {
+    document.documentElement.style.overflow = "hidden"; // Для <html>
+    document.body.style.overflow = "hidden"; // Для <body>
+  }, []);
 
   return (
     <div className={style["prequel-page"]}>
@@ -71,11 +85,11 @@ useEffect(()=>{
         })}
       </div>
 
-      <div className={style['skip-button']}>
-      <LongButton   onClick={SkipPrequel} costumHeight>
-        {" "}
-        <span> Пропустить</span>
-      </LongButton>
+      <div className={style["skip-button"]}>
+        <LongButton onClick={SkipPrequel} costumHeight>
+          {" "}
+          <span> Пропустить</span>
+        </LongButton>
       </div>
     </div>
   );

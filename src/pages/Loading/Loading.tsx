@@ -7,7 +7,9 @@ const Loading = () => {
   const storage = localStorage.getItem("first-time");
   const firstVisiting = storage ? JSON.parse(storage) : false;
   const nextPage = firstVisiting ? "/absurd" : "/prequel";
-
+  if (firstVisiting) {
+    localStorage.removeItem("first-time");
+  }
   useEffect(() => {
     const navigateTimer = setTimeout(() => {
       navigate(nextPage);
