@@ -3,6 +3,7 @@ import bgImage from "../../assets/preguel-bg.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
+import LongButton from "../../components/Buttons/LongButton/LongButton";
 
 const Prequel = () => {
   const headlines = ["2040 год", "2045 год"];
@@ -29,14 +30,19 @@ const Prequel = () => {
     setPrequelEnd(true);
     setTimeout(() => {
       navigate("/absurd");
+      document.documentElement.style.overflow = 'auto'; // Для <html>
+      document.body.style.overflow = 'auto'; // Для <body>
     }, 2000);
   };
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setPrequelEnd(true);
       setTimeout(() => {
         navigate("/absurd");
+        document.documentElement.style.overflow = 'auto'; // Для <html>
+        document.body.style.overflow = 'auto'; // Для <body>
       }, 2000);
     }, 70000);
 
@@ -44,6 +50,11 @@ const Prequel = () => {
       clearTimeout(timer);
     };
   }, [prequelEnd]);
+
+useEffect(()=>{
+  document.documentElement.style.overflow = 'hidden'; // Для <html>
+    document.body.style.overflow = 'hidden'; // Для <body>
+},[])
 
   return (
     <div className={style["prequel-page"]}>
@@ -64,7 +75,11 @@ const Prequel = () => {
               <span className={style["title"]}>{text}</span>
               <div className={style["description"]}>
                 {texts[ind].map((desc) => {
-                  return <span key={desc} className={style["paragraph"]}>{desc}</span>;
+                  return (
+                    <span key={desc} className={style["paragraph"]}>
+                      {desc}
+                    </span>
+                  );
                 })}
               </div>
             </div>
@@ -72,8 +87,11 @@ const Prequel = () => {
         })}
       </div>
 
-      <div className={style["skip-button"]} onClick={SkipPrequel}>
-        Пропустить
+      <div className={style['skip-button']}>
+      <LongButton   onClick={SkipPrequel} costumHeight>
+        {" "}
+        <span> Пропустить</span>
+      </LongButton>
       </div>
     </div>
   );

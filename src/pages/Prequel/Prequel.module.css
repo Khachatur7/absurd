@@ -1,11 +1,6 @@
-html,body{
-  overflow: hidden;
-}
-
 .prequel-page {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   padding-bottom: 150px;
 }
 
@@ -47,8 +42,8 @@ html,body{
 }
 
 .description {
-  line-height: 17px;
-  font-size: 18.2px;
+  line-height: 21px;
+  font-size: 22px;
   text-align: justify;
   display: flex;
   flex-direction: column;
@@ -86,7 +81,7 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
-  perspective:700px;
+  perspective: 700px;
   text-align: justify;
 }
 
@@ -133,29 +128,14 @@ body {
 
 .skip-button {
   position: fixed;
-  top: 93vh;
+  top: 94vh;
   z-index: 11;
-  width: 165px;
+  width: 100%;
   height: 35px;
   padding: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border: 0.5px solid #c5c6cc;
   border-radius: 5px;
-}
-
-.skip-button::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  backdrop-filter: blur(20px);
-  filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: -1;
 }

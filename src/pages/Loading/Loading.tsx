@@ -22,6 +22,9 @@ const Loading = () => {
       <h1 onClick={() => navigate(nextPage)} className={style["title"]}>
         территория абсурда
       </h1>
+      {[...Array(12)].map((el) => {
+        return <div className={style["bg-pre-loading"]} key={el + 10}></div>;
+      })}
     </div>
   );
 };

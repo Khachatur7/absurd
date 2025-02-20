@@ -1,4 +1,7 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import "./App.css";
 import Loading from "./pages/Loading/Loading";
 import Prequel from "./pages/Prequel/Prequel";
@@ -34,14 +37,14 @@ const router = createBrowserRouter([
       { path: "profile", element: <Profile /> },
       { path: "statistics", element: <Statisics /> },
       { path: "alliance", element: <Alliance /> },
-      { path: "managment", element: <AllianceManagement />},
-      { path: "wallet", element: <Wallet />}
-
+      { path: "managment", element: <AllianceManagement /> },
+      { path: "wallet", element: <Wallet /> },
     ],
   },
 ]);
 
 function App() {
+ 
   return (
     <>
       <RouterProvider router={router} />

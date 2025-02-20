@@ -29,7 +29,6 @@
 html,
 body {
   box-sizing: border-box;
-  overflow: auto;
 }
 
 body {
@@ -41,7 +40,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: var(--def-color);
-  overflow: auto;
 }
 
 *,
