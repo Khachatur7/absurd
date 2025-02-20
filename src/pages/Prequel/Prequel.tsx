@@ -35,22 +35,6 @@ const Prequel = () => {
     }, 2000);
   };
 
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPrequelEnd(true);
-      setTimeout(() => {
-        navigate("/absurd");
-        document.documentElement.style.overflow = 'auto'; // Для <html>
-        document.body.style.overflow = 'auto'; // Для <body>
-      }, 2000);
-    }, 70000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [prequelEnd]);
-
 useEffect(()=>{
   document.documentElement.style.overflow = 'hidden'; // Для <html>
     document.body.style.overflow = 'hidden'; // Для <body>
