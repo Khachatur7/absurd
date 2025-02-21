@@ -11,6 +11,7 @@ const Header: FC<{
 }> = ({ text, subtitle, openRankPopup, subTitleIsRank }) => {
   const navigate = useNavigate();
   const isOnProfile = useMatch("/absurd/profile");
+  const isOnRating = useMatch("/absurd/rating");
 
   const ClickOnAvatar = () => {
     if (!isOnProfile) {
@@ -43,7 +44,10 @@ const Header: FC<{
         <span>{text}</span>
         {subtitle && <span className={style["subtitle"]}>{subtitle}</span>}
       </div>
-      <div className={style["header-icon"]}>
+      <div
+        className={style["header-icon"]}
+        onClick={() => (!isOnRating ? navigate("/absurd/rating") : "")}
+      >
         <svg
           width="30"
           height="30"

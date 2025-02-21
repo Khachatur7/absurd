@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import style from "./Profile.module.css";
 import classNames from "classnames";
 import MyStatistics from "./MyStatistics/MyStatistics";
-import AllStatistics from "./AllStatistics/AllStatistics";
+import TerritoryStatistics from "./TerritoryStatistics/TerritoryStatistics";
 import RankPopup from "../../components/Popups/RankPopup/RankPopup";
 
 const Profile = () => {
@@ -29,7 +29,7 @@ const Profile = () => {
         </div>
       </div>
       {activeSection == "Моя статистика" && <MyStatistics />}
-      {activeSection == "Cтатистика территории" && <AllStatistics />}
+      {activeSection == "Cтатистика территории" && <TerritoryStatistics />}
       {rankPopup && <RankPopup closePopup={setRankPopup} />}
     </div>
   );

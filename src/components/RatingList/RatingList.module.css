@@ -1,0 +1,40 @@
+.rating-list{
+    width: 100%;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+   justify-content: start;
+    align-items: center;
+}
+
+.rating-header{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: var(--blue-border);
+    gap: 15px;
+}
+
+.index{
+    width: 20px;
+  margin-right: 5px;
+}
+
+.count,
+.token{
+    width: 15%;
+}
+
+.name{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 45px;
+}
+
+.list{
+    width: 100%;
+}

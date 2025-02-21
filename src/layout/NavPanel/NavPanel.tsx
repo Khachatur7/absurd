@@ -18,6 +18,7 @@ interface Page {
 const NavPanel = () => {
   const [takeResource, setTakeResource] = useState<boolean>(false);
   const isOnProfile = useMatch("/absurd/profile");
+  const isOnRating = useMatch("/absurd/rating");
   const isOnStatisics = useMatch("/absurd/statisics");
   const isOnAlliance = useMatch("/absurd/alliance");
   const isOnWallet = useMatch("/absurd/wallet");
@@ -41,7 +42,9 @@ const NavPanel = () => {
     {
       name: pageNames[1],
       text: "Склад",
-      children: <WarehouseSVG gradient={activePage == "warehouse"} />,
+      children: (
+        <WarehouseSVG gradient={activePage == "warehouse"} />
+      ),
     },
     {
       name: pageNames[2],
@@ -65,6 +68,9 @@ const NavPanel = () => {
       setActivePage("territories");
     } else if (isOnProfile || isOnStatisics || isOnWallet) {
       setActivePage("");
+    }
+    else if (isOnRating){
+      setActivePage('warehouse')
     }
   }, [location]);
 

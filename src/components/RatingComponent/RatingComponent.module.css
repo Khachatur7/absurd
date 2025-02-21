@@ -1,0 +1,60 @@
+.rating-component {
+  width: 100%;
+  padding: 15px 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  border-bottom: var(--blue-border);
+}
+
+.index {
+  width: 20px;
+  font-weight: 300;
+  line-height: 16.94px;
+  margin-right: 5px;
+}
+
+.count {
+  width: 15%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.36px;
+  display: flex;
+  overflow: hidden;
+}
+
+.token{
+  width: 25%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.36px;
+  display: flex;
+  overflow: hidden;
+}
+
+.name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.count span,
+.token span,
+.name span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width:360px) {
+  .token,
+  .count {
+    font-size: 14px;
+  }
+}

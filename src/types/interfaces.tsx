@@ -73,3 +73,9 @@ export interface IMessage {
   name:string
   message:string
 }
+
+export interface IRating {
+  token:string
+  name:string
+  count:string
+}

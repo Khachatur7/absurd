@@ -4,10 +4,10 @@ import LongButton from "../../../components/Buttons/LongButton/LongButton";
 import DataList from "../../../components/DataList/DataList";
 import ExtendableDataList from "../../../components/ExtendableDataList/ExtendableDataList";
 import { IDataString } from "../../../types/interfaces";
-import style from "./AllStatistics.module.css";
+import style from "./TerritoryStatistics.module.css";
 import classNames from "classnames";
 
-const AllStatistics = () => {
+const TerritoryStatistics = () => {
   const firstData: IDataString[] = [
     {
       name: "Твоё влияние",
@@ -163,4 +163,4 @@ const AllStatistics = () => {
   );
 };
 
-export default AllStatistics;
+export default TerritoryStatistics;

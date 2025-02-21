@@ -15,6 +15,7 @@ import Statisics from "./pages/Statisics/Statisics";
 import Alliance from "./pages/Alliance/Alliance";
 import AllianceManagement from "./pages/AllianceManagement/AllianceManagement";
 import Wallet from "./pages/Wallet/Wallet";
+import Rating from "./pages/Rating/Rating";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
       { path: "alliance", element: <Alliance /> },
       { path: "managment", element: <AllianceManagement /> },
       { path: "wallet", element: <Wallet /> },
+      { path: "rating", element: <Rating /> },
     ],
   },
 ]);
