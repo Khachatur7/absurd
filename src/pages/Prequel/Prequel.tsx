@@ -1,5 +1,4 @@
 import style from "./Prequel.module.css";
-import bgImage from "../../assets/preguel-bg.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
@@ -30,8 +29,8 @@ const Prequel = () => {
     setPrequelEnd(true);
     setTimeout(() => {
       navigate("/absurd");
-      document.documentElement.style.overflow = "auto"; // Для <html>
-      document.body.style.overflow = "auto"; // Для <body>
+      document.documentElement.style.overflow = "auto"; // чтобы добавлялся скролл после того как приквел закончился
+      document.body.style.overflow = "auto"; // чтобы добавлялся скролл после того как приквел закончился
     }, 2000);
   };
   useEffect(() => {
@@ -39,10 +38,10 @@ const Prequel = () => {
       setPrequelEnd(true);
       setTimeout(() => {
         navigate("/absurd");
-        document.documentElement.style.overflow = "auto"; // Для <html>
-        document.body.style.overflow = "auto"; // Для <body>
+        document.documentElement.style.overflow = "auto"; // чтобы добавлялся скролл после того как приквел закончился
+        document.body.style.overflow = "auto"; // чтобы добавлялся скролл после того как приквел закончился
       }, 2000);
-    }, 70000);
+    }, 105000);
 
     return () => {
       clearTimeout(timer);
@@ -50,15 +49,13 @@ const Prequel = () => {
   }, [prequelEnd]);
 
   useEffect(() => {
-    document.documentElement.style.overflow = "hidden"; // Для <html>
-    document.body.style.overflow = "hidden"; // Для <body>
+    document.documentElement.style.overflow = "hidden"; // чтобы убирался скролл на странице с приквелом
+    document.body.style.overflow = "hidden"; // чтобы убирался скролл на странице с приквелом
   }, []);
 
   return (
     <div className={style["prequel-page"]}>
-      <div className={style["bg"]}>
-        <img src={bgImage} alt="" />
-      </div>
+
       <div
         className={classNames(
           style["prequel-start"],
