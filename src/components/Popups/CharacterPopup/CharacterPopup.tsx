@@ -4,25 +4,33 @@ import clientAvatar from "../../../assets/avatar.png";
 import { IMessage } from "../../../types/interfaces";
 import Message from "../../Message/Message";
 import LongButton from "../../Buttons/LongButton/LongButton";
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CharacterPopup: FC<{
   closePopup: (value: React.SetStateAction<boolean>) => void;
 }> = ({ closePopup }) => {
   const navigate = useNavigate();
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   const messages: IMessage[] = [
-    {
-      avatar: clientAvatar,
-      name: "Иван Иванов",
-      message: "Кто ты?",
-    },
     {
       avatar: characterImage,
       name: "Торговец Джек",
       message: `Джек — существо, напоминающее огромного карпа, одетого в полосатый, слегка потрёпанный жилет и с маленькой шляпой, которая постоянно сползает ему на бок. Его плавники двигаются плавно и грациозно, а глаза блестят, словно в них скрыто тысяча тайн. Из его рта периодически вырывается клуб дыма, когда он с хитрецой улыбается. Говорит он с растяжкой и лёгкой картавостью, словно смакуя каждое своё слово.`,
     },
+    {
+      avatar: clientAvatar,
+      name: "Иван Иванов",
+      message: "Кто ты?",
+    },
   ];
+
+  useEffect(() => {
+    scrollToBottom();
+  }, []);
 
   return (
     <div className={style["modale"]}>
@@ -50,6 +58,7 @@ const CharacterPopup: FC<{
         {messages.map((m) => {
           return <Message message={m} key={m.message} />;
         })}
+        <div ref={messagesEndRef} className={style["scroll-marker"]} />
       </div>
       <div className={style["questions-buttons"]}>
         <div className={style["long-button"]}>
